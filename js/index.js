@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   loadVideo("Đen Vâu");
 });
 
-var modal = document.getElementById("myModal");
+var model = document.getElementById("myModel");
 
 var span = document.getElementsByClassName("close")[0];
 
@@ -20,7 +20,7 @@ span.onclick = function () {
 };
 
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == model) {
     closeVideo();
   }
 };
@@ -29,7 +29,7 @@ function loadVideo(keyword) {
   var YOUTUBE_API =
     "https://content.googleapis.com/youtube/v3/search?q=" +
     keyword +
-    "&type=video&maxResults=9&part=snippet&key= AIzaSyCg0glY6xteGLw-NbGLseVBaLkt_kvP8L8";
+    "&type=video&maxResults=9&part=snippet&key= AIzaSyAeH2HPtxZ4U_iHvQysY8icnmZ9COOe3nI";
   var xhr = new XMLHttpRequest();
   xhr.open("GET", YOUTUBE_API, true);
   xhr.onreadystatechange = function () {
@@ -64,13 +64,13 @@ function loadVideo(keyword) {
 }
 
 function closeVideo() {
-  modal.style.display = "none";
+  model.style.display = "none";
   videoFrame.scr = "";
 }
 
 function showVideo(videoId) {
   videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
   setTimeout(function () {
-    modal.style.display = "block";
+    model.style.display = "block";
   }, 300);
 }
