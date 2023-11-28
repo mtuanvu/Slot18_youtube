@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       loadVideo(this.value);
     }
   };
-  const searchDefault = "sơn tùng";
+  const searchDefault = "Sơn Tùng";
 
   loadVideo(searchDefault);
 });
@@ -30,7 +30,7 @@ function loadVideo(keyword) {
   var YOUTUBE_API =
     "https://content.googleapis.com/youtube/v3/search?q=" +
     keyword +
-    "&type=video&maxResults=9&part=snippet&key=AIzaSyAAGqBc6_Y2RJrpE2qAGV7DoSZ_FrxGdXM";
+    "&type=video&maxResults=9&part=snippet&key= AIzaSyAeH2HPtxZ4U_iHvQysY8icnmZ9COOe3nI";
   var xhr = new XMLHttpRequest();
   xhr.open("GET", YOUTUBE_API, true);
   xhr.onreadystatechange = function () {
